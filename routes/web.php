@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/produk', [ProdukController::class, 'index']) -> name('produk');
+
+Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy']) -> name('produkDelete'); // Lempar ke controller
+
+Route::get('/produktambah', [ProdukController::class, 'create']) -> name('produkTambah');

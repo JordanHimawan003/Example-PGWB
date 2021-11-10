@@ -35,7 +35,7 @@
 
 @yield('content')
 
-@include('partials.footer')
+{{-- @include('partials.footer') --}}
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
