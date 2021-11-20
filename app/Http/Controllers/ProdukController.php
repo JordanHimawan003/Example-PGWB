@@ -7,13 +7,13 @@ use App\Models\Produk;
 
 class ProdukController extends Controller
 {
-    // View
+    // Read
     public function index() {
         $getProduk = Produk::all();
         return view('produk.produk', compact('getProduk'));
     }
 
-    // Read
+    // Delete
     public function destroy($id) {
         $dropProduk = Produk::find($id); // Cari data
         $dropProduk ->  delete(); // Delete data
